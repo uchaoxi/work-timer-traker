@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工时打卡计时器</title>
+    <link rel="stylesheet" href="work-time-tracker.css">
+</head>
+<body>
+    <div class="container">
+        <h1>工时打卡计时器</h1>
+        <div class="current-time" id="current-time">当前时间: --:--:--</div>
+        
+        <div class="controls">
+            <button id="clock-in" class="btn clock-in-btn">上班打卡</button>
+            <button id="clock-out" class="btn clock-out-btn">下班打卡</button>
+        </div>
+        
+        <div class="today-info">
+            <div>上班时间: <span id="start-time">--:--:--</span></div>
+            <div>下班时间: <span id="end-time">--:--:--</span></div>
+            <div>今日工时: <span id="work-duration">--:--:--</span></div>
+            <div>加班时长: <span id="overtime">--:--:--</span></div>
+        </div>
+        
+        <div class="monthly-info">
+            <h2>本月累计加班</h2>
+            <div id="monthly-overtime">00:00:00</div>
+            <button id="view-records" class="btn records-btn">查看打卡记录</button>
+            <button id="import-history" class="btn import-btn">导入历史数据</button>
+            <button id="import-backup" class="btn import-btn">导入备份数据</button>
+            <button id="export-records" class="btn export-btn">导出数据</button>
+        </div>
+        
+        <div class="import-modal" id="import-modal">
+            <div class="modal-content">
+                <h3>导入历史打卡数据</h3>
+                <div class="form-group">
+                    <label for="history-date">日期:</label>
+                    <input type="date" id="history-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="history-start-time">上班时间:</label>
+                    <input type="time" id="history-start-time" required>
+                </div>
+                <div class="form-group">
+                    <label for="history-end-time">下班时间 (非必填):</label>
+                    <input type="time" id="history-end-time">
+                </div>
+                <div class="modal-buttons">
+                    <button id="save-history" class="btn save-btn">保存</button>
+                    <button id="cancel-import" class="btn cancel-btn">取消</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="records" id="records">
+            <h3>打卡记录</h3>
+            <table id="records-table">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>上班时间</th>
+                        <th>下班时间</th>
+                        <th>工时</th>
+                        <th>加班时长</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="work-time-tracker.js"></script>
+</body>
+</html>
