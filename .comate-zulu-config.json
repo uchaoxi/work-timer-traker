@@ -1,9 +1,0 @@
-{
-  "id": 3,
-  "content": "开发一个带声效的马里奥计算器",
-  "prompt": "写一个马里奥计算器，布局合理，画面精美，带声效。\n开发完成后，使用预览工具打开",
-  "schema": "",
-  "scene": "demo",
-  "displayNew": false,
-  "status": "done"
-}
