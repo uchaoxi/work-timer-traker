@@ -279,11 +279,6 @@ h1 {
         width: 100%;
     }
     
-    .today-info div {
-        flex-direction: column;
-        gap: 5px;
-    }
-    
     #records-table {
         font-size: 14px;
     }
